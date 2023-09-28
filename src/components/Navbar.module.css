@@ -1,0 +1,28 @@
+.navbar{
+    grid-area: navbar_area;
+}
+
+.item{
+
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #20b2aa;
+    background-color: #f0f5f5;
+}
+
+.item + .item{
+    margin-top: 5px;
+}
+
+.item a{
+    text-decoration: none;
+    color: #20b2aa;
+}
+
+.active{
+    background-color: #20b2aa;
+    color: white;
+}
+.active a{
+    color: white;
+}

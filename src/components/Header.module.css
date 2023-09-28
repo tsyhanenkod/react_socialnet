@@ -1,0 +1,44 @@
+.header{
+    grid-area: header_area;
+    background-color: #20b2aa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+.logo{
+    height: 50px;
+    width: auto;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+}
+
+.logo_text{
+    margin: 0;
+    color: white;
+}
+
+.login_nav{
+    display: flex;
+
+    align-items: center;
+}
+
+.between{
+    margin: 0;
+    padding: 0 5px;
+    color: white;
+}
+
+.log_button{
+    text-decoration: none;
+    color: white;
+    transition: all .3s;
+}
+
+.log_button:hover{
+    color: #dbdbdb;
+}
