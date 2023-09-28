@@ -4,16 +4,16 @@ const Navbar = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.item}>
-                <a href="/">Profile</a>
+                <a href="/public">Profile</a>
+            </div>
+            <div className={`${styles.item} ${styles.active}`}>
+                <a href="/public">Messages</a>
             </div>
             <div className={styles.item}>
-                <a href="/">Messages</a>
+                <a href="/public">Friends</a>
             </div>
             <div className={styles.item}>
-                <a href="/">Friends</a>
-            </div>
-            <div className={styles.item}>
-                <a href="/">Settings</a>
+                <a href="/public">Settings</a>
             </div>
         </nav>
     )
