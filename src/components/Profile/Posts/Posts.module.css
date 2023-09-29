@@ -1,0 +1,27 @@
+.posts {
+    margin-top: 20px;
+}
+
+.textarea{
+    width: 98%;
+    height: 80px;
+    padding: 10px;
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+}
+
+.add_post{
+    width: 100%;
+    background-color: #20b2aa;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 30px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    transition: all .3s;
+}
+
+.add_post:hover{
+    background-color: #1e9c95;
+}

@@ -1,0 +1,61 @@
+.post{
+    border: 1px solid darkgrey;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.post + .post{
+    margin-top: 10px;
+}
+
+.post_btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btns_block{
+    display: flex;
+    align-items: center;
+}
+
+.post_btn{
+    display: flex;
+    align-items: center;
+}
+
+.likes{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.comments{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.reposts{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.post_text{
+
+}
+
+.post_body{
+
+}
+
+.postdate{
+    color: darkgrey;
+    bottom: 5px;
+    right: 5px;
+}
+
+.post_btn + .post_btn{
+    margin-left: 10px;
+}

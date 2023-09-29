@@ -1,3 +1,56 @@
+p, a, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
 .profile{
 
 }
+
+.profile_info{
+
+}
+
+.main_image{
+    background-color: lightseagreen;
+    height: 120px;
+    width: 120px;
+    border-radius: 5px;
+}
+
+.main_info{
+    display: flex;
+    position: relative;
+}
+
+.status{
+    position: absolute;
+    right: 0;
+    color: grey;
+}
+
+.main_text{
+    margin-left: 10px;
+}
+
+.name{
+
+}
+
+.username{
+    color: #20b2aa;
+}
+
+.more_info{
+    margin-top: 15px;
+}
+
+.infotext + .infotext{
+    margin-top: 7px;
+}
+
+
+
+
+
