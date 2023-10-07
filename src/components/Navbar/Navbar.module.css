@@ -3,8 +3,6 @@
 }
 
 .item{
-
-    padding: 5px 10px;
     border-radius: 5px;
     color: #20b2aa;
     background-color: #f0f5f5;
@@ -15,14 +13,14 @@
 }
 
 .item a{
+    display: block;
     text-decoration: none;
     color: #20b2aa;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
-.active{
-    background-color: #20b2aa;
+.item a.active{
     color: white;
-}
-.active a{
-    color: white;
+    background-color: lightseagreen;
 }
