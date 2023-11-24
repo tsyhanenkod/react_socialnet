@@ -1,0 +1,7 @@
+.chat{
+    background-color: red;
+}
+
+.chat.active{
+    color: red;
+}

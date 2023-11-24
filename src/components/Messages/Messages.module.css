@@ -1,6 +1,12 @@
 .messages{
-
+    display: grid;
+    grid-template-columns: 2fr 10fr;
 }
 
-.chats{}
-.dialog{}
+.chats{
+    color : white;
+}
+
+.dialog{
+    color : black;
+}
