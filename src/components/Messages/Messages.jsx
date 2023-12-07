@@ -6,15 +6,18 @@ const Messages = (props)=> {
     return (
         <dev className={styles.messages}>
             <div className={styles.chats}>
-                <Chat id='1' name='Den' />
-                <Chat id='2' name='Max' />
-                <Chat id='3' name='Vika' />
-                <Chat id='4' name='Lena' />
+                {
+                    props.state.dialogs.map(dialog => {
+                        return <Chat id={dialog.id} name={dialog.name} />
+                    })
+                };
             </div>
-            <div className={styles.dialog}>
-                <Message message='Hi' />
-                <Message message='How are you?' />
-                <Message message="I'm fine!" />
+            <div >
+                {
+                    props.state.messages.map(message => {
+                        return <Message id={message.id} message={message.message} />
+                    })
+                }
             </div>
         </dev>
     )
