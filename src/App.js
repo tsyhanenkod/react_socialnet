@@ -5,7 +5,6 @@ import Profile from './components/Profile/Profile'
 import Messages from './components/Messages/Messages'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
-
 const App = (props) => {
     return (
         <BrowserRouter>
@@ -14,7 +13,7 @@ const App = (props) => {
                 <Navbar/>
                 <div className="content">
                     <Routes>
-                        <Route path="/profile" element={<Profile state={ props.state.profilePage } />}/>
+                        <Route path="/profile" element={<Profile state={ props.state.profilePage } addNewPost={props.addNewPost} updateNewPostText={props.updateNewPostText}/>}/>
                         <Route path="/messages/*" element={<Messages state={ props.state.chatsPage } />}/>
                     </Routes>
                 </div>

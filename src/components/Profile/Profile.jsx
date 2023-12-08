@@ -18,7 +18,7 @@ const Profile = (props) =>{
                     <p className={styles.status}>last seen at 00:00 AM</p>
                 </div>
             </div>
-             <Posts state={ props.state }/>
+             <Posts state={ props.state } addNewPost={props.addNewPost} updateNewPostText={props.updateNewPostText}/>
         </div>
     )
 }
