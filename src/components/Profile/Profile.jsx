@@ -1,5 +1,5 @@
 import styles from "./Profile.module.css";
-import Posts from './Posts/Posts'
+import PostsContainer from './Posts/PostsContainer'
 
 const Profile = (props) =>{
     return (
@@ -18,7 +18,7 @@ const Profile = (props) =>{
                     <p className={styles.status}>last seen at 00:00 AM</p>
                 </div>
             </div>
-             <Posts state={ props.state } dispatch={props.dispatch}/>
+             <PostsContainer store={props.store}/>
         </div>
     )
 }

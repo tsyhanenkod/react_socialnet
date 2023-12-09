@@ -2,34 +2,32 @@ import styles from "../Messages/Messages.module.css";
 import Chat from "./Chat/Chat";
 import Message from "./Message/Message";
 import React from "react";
-import {addMessageActionCreator, updateNewMessageTextActionCreator} from "../../redux/dialogs_reducer";
 
 const Messages = (props)=> {
 
     let newMessageElement = React.createRef();
 
     let addMessage = () => {
-        props.dispatch(addMessageActionCreator());
-        newMessageElement.current.value = '';
+        props.addMessage()
     };
 
     let onMessageChange = () => {
-        let messageText = newMessageElement.current.value;
-        props.dispatch(updateNewMessageTextActionCreator(messageText))
+        let messageText = newMessageElement.current.value
+        props.onMessageChange(messageText)
     }
 
     return (
         <dev className={styles.messages}>
             <div className={styles.chats}>
                 {
-                    props.state.dialogs.map(dialog => {
+                    props.dialogs.map(dialog => {
                         return <Chat id={dialog.id} name={dialog.name} />
                     })
                 };
             </div>
             <div>
                 {
-                    props.state.messages.map(message => {
+                    props.messages.map(message => {
                         if (message.userId === 1) {
                             return (
                                 <div className={styles.sender}>
@@ -41,6 +39,10 @@ const Messages = (props)=> {
                                 <div className={styles.getter}>
                                     <Message state={message}/>
                                 </div>
+                            )
+                        } else {
+                            return (
+                                <p>No Data</p>
                             )
                         }
                     })

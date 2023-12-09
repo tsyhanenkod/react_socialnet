@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import Profile from './components/Profile/Profile'
-import Messages from './components/Messages/Messages'
+import MessagesContainer from './components/Messages/MessagesContainer'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 const App = (props) => {
@@ -13,8 +13,8 @@ const App = (props) => {
                 <Navbar/>
                 <div className="content">
                     <Routes>
-                        <Route path="/profile" element={<Profile state={ props.state.profilePage } dispatch={props.dispatch} />} />
-                        <Route path="/messages/*" element={<Messages state={ props.state.chatsPage } dispatch={props.dispatch} />} />
+                        <Route path="/profile" element={<Profile store={ props.store } />} />
+                        <Route path="/messages/*" element={<MessagesContainer store={ props.store} />} />
                     </Routes>
                 </div>
             </div>
