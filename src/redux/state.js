@@ -1,7 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const ADD_MESSAGE = 'ADD-MESSAGE'
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+import profileReducer from './profile_reducer'
+import dialogsReducer from './dialogs_reducer'
 
 let store ={
     _state: {
@@ -61,55 +59,10 @@ let store ={
     },
 
     dispatch(action){
-        if (action.type === 'ADD-POST'){
-            let newPost = {
-                id: 3,
-                text: this._state.profilePage.newPostText,
-                likes: 11,
-            };
-            this._state.profilePage.posts.push(newPost)
-            this.callSubscriber(this._state)
-        }else if (action.type === 'UPDATE-NEW-POST-TEXT'){
-            this._state.profilePage.newPostText = action.text;
-            this.callSubscriber(this._state)
-        }else if (action.type === 'ADD-MESSAGE'){
-            let newMessage = {
-                id: 4,
-                text: this._state.chatsPage.newMessageText,
-                userId: 1,
-            }
-            this._state.chatsPage.messages.push(newMessage)
-            this.callSubscriber(this._state)
-        }else if (action.type === 'UPDATE-NEW-MESSAGE-TEXT'){
-            this._state.chatsPage.newMessageText = action.text;
-            this.callSubscriber(this._state)
-        }
-    }
-}
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.chatsPage = dialogsReducer(this._state.chatsPage, action)
 
-export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST,
-    }
-}
-
-export const updateNewPostTextActionCreator = (postText) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT,
-        text: postText,
-    }
-}
-
-export const addMessageActionCreator = () => {
-    return {
-        type: ADD_MESSAGE,
-    }
-}
-
-export const updateNewMessageTextActionCreator = (messageText) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_TEXT,
-        text: messageText,
+        this.callSubscriber(this._state)
     }
 }
 
