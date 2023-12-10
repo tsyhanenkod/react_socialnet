@@ -13,8 +13,8 @@ const App = (props) => {
                 <Navbar/>
                 <div className="content">
                     <Routes>
-                        <Route path="/profile" element={<Profile store={ props.store } />} />
-                        <Route path="/messages/*" element={<MessagesContainer store={ props.store} />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/messages/*" element={<MessagesContainer />} />
                     </Routes>
                 </div>
             </div>
